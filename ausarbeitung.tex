@@ -1,0 +1,193 @@
+% This is LLNCS.DEM the demonstration file of
+% the LaTeX macro package from Springer-Verlag
+\documentclass[a4paper,12pt]{llncs}
+%
+\usepackage{makeidx}  % allows for indexgeneration
+\makeindex
+
+\usepackage[ngerman]{babel}
+\usepackage[utf8]{inputenc}      % Code-Page latin 1
+\usepackage[T1]{fontenc}
+% Nur eine der beiden folgenden Zeilen einbinden!
+% siehe Abschnitt Bilder
+%\usepackage{graphicx}       % Bilder einbinden, Version fuer normales latex
+\usepackage[pdftex]{graphicx}       % Bilder einbinden, Version fuer pdflatex
+
+% mit Hyperrefs
+\usepackage[pdftex, plainpages=false,hypertexnames=true,pdfnewwindow=true,backref=true,colorlinks=true,citecolor=blue,linkcolor=black,urlcolor=blue,filecolor=blue]{hyperref}% 
+% weitere Packages
+\usepackage{ifthen}                 % Zum Auskommentieren von Textteilen
+\usepackage{amssymb}                % Mathematische Buchstaben
+\usepackage{amsmath}                % Verbesserter Formelsatz
+\usepackage[vlined,boxed]{algorithm2e}
+\usepackage{booktabs}               % schönere Tabellen
+\usepackage{color}
+\usepackage{hyperref}
+ \hypersetup{urlcolor=black,citecolor=black}
+%\setalcapskip{1.5ex} % fuer package algorithm
+\usepackage{dsfont}  
+%\newtheorem{definition}{Definition}
+\usepackage{doc}
+
+\usepackage{subcaption}
+
+% Seitenformat ===============================================================
+\hoffset=-1.25truecm
+\setlength{\topmargin}{0.0cm}
+\setlength{\textheight}{23.0cm}
+\setlength{\footskip}{1.5cm}
+\setlength{\textwidth}{15.4cm}
+\setlength{\evensidemargin}{1.5cm}
+\setlength{\oddsidemargin}{1.5cm}
+\setlength{\parskip}{1ex}
+\setlength{\parindent}{0pt}
+\setlength{\marginparwidth}{1.4cm}
+\setlength{\marginparsep}{1mm}
+\setalcapskip{1.5ex} % fuer package algorithm
+
+\pagestyle{plain}
+
+% Makro-Definitionen ==========================================================
+% Zahlenbereiche -------------------------------------------------------------
+\newcommand{\N}{{\mathbb{N}}}
+\newcommand{\R}{{\mathbb{R}}}
+\newcommand{\C}{{\mathbb{C}}}
+\newcommand{\Z}{{\mathbb{Z}}}
+\newcommand{\Q}{{\mathbb{Q}}}
+
+% 
+\def\myverzeichnis{.}
+
+\numberwithin{equation}{section} 
+% Bild -----------------------------------------------------------------------
+% #1 Filename;  #2 Label;  #3 Bildunterschrift;  #4 Kurzform
+\newcommand{\bild}[4]{
+  \begin{figure}[htbp]
+    \begin{center}
+      \includegraphics{#1}
+      \caption[#4]{#3}
+      \label{#2}
+    \end{center}
+  \end{figure}
+}
+
+% Bildbreite -----------------------------------------------------------------
+% #1 Filename;  #2 Breite;  #3 Label;  #4 Bildunterschrift;  #5 Kurzform
+\newcommand{\bildbreite}[5]{
+  \begin{figure}[htbp]
+    \begin{center}
+      \includegraphics[width=#2]{#1}
+      \caption[#5]{#4}
+      \label{#3}
+    \end{center}
+  \end{figure}
+}
+
+% !TeX spellcheck = de_DE
+% ============================================================================
+\begin{document}
+
+% =========== Das war der Vorspann, jetzt geht's los! ========================
+
+% ============================================================================
+% =============  AB HIER DARF UND SOLL GETIPPT WERDEN ========================
+% ============================================================================
+
+\author{Yaroslav Nalivayko}
+\index{Yaroslav Nalivayko}
+
+% Das Institut wird fuer den Betreuer missbraucht ...
+\institute{{\bf Betreuer:} M.Sc. Benjamin Maier}
+\authorrunning{Yaroslav Nalivayko}
+\title{Newton Fraktale}
+
+\maketitle
+
+\thispagestyle{empty}
+
+\begin{abstract}
+Newton Fraktale sind eine Teilmenge der mathematischen Fraktale, die durch Benutzung des Newton Verfahrens für Lösung von nichtlinearen Gleichungen auf Komplexe Ebene erscheinen.
+\end{abstract}
+
+% Einleitung -----------------------------------------------------------------
+\section{Einleitung}
+Newton Fraktale stellen eine interessante Klasse der mathematischen Fraktalen dar. 
+Im Rahmen dieser Arbeit werden \nameref{sec:theo} vorgestellt und ein Programm für die \nameref{sec:vis} der Fraktalen entwickelt. In letzte Sektion findet \nameref{sec:analy} mancher interessanten Funktionen statt.
+
+
+\section{Theoretische Grundlagen}\label{sec:theo}
+%Hier werden Grundbegriffe erläutert.
+\subsection{Numerische Mathematik}
+Die numerische Mathematik beschäftigt sich als Teilgebiet der Mathematik mit der Konstruktion und Analyse von Algorithmen für kontinuierliche mathematische Probleme. \cite{nummath}
+Oft wird benutzt, um approximative Lösungen mit Hilfe von Computer zu finden.
+\subsection{Newton Verfahren}
+Newton Verfahren ist das iterative numerische Verfahren, das eine Wurzel gegebener Funktion findet.	Die Methode ist nach Sir Isaac Newton benannt. \\
+Wir interessieren uns in stetig differenzierbaren Funktionen mit nur eine Variable.
+\[
+f(x) = 0
+\] 
+Man soll manuell den Startwert $x_0$ wählen und dann die iterative Methode benutzen, bis akzeptable Lösung gefunden wird.
+\[
+x_{n+1} = x_n + \frac{f(x_n)}{f'(x_n)}
+\] 
+Gewöhnlich wählt man eine zulässige Abweichung $\varepsilon$ und eine maximale Anzahl der Schritte $N$.
+Nach jedem Schritt der iterative Methode prüft man. Falls $f(x_n)  < \varepsilon$, dann ist die Lösung gefunden. Und falls $n > N$, dann ist die Lösung unauffindbar in akzeptable Anzahl der Schritte. 
+\subsection{Fraktale}
+Fraktal (lateinisch $fractus$ - gebrochen) ist ein von Mathematiker Benoît Mandelbrot geprägter Begriff, der bestimmte natürliche oder künstliche Gebilde oder Muster bezeichnet. Diese Gebilde oder Muster weisen einen hohen Grad von Skaleninvarianz bzw. Selbstähnlichkeit. 
+Das ist beispielsweise der Fall, wenn ein Objekt aus mehreren verkleinerten Kopien seiner selbst besteht. \cite{fraktal} \\
+Figure \ref{fig:frac_kunst} stellt ein Beispiel für ein künstliches Fraktal, und Figure \ref{fig:frac_math} für ein mathematisches Fraktal.
+\begin{figure}[ht]   
+	\begin{subfigure}{.5\textwidth}
+	\centering
+	\includegraphics[width=.4\linewidth]{figures/Romanesco}
+	\caption{Romanesco. Ein natürliches Fraktal. \cite{fractal_romanesco}}
+	\label{fig:frac_kunst}
+\end{subfigure}%
+\begin{subfigure}{.5\textwidth}
+	\centering
+	\includegraphics[width=.4\linewidth]{figures/Mandelbrot}
+	\caption{Mandelbrot. Ein künstliches Fraktal. \cite{fractal_mandelbrot}}
+	\label{fig:frac_math}
+\end{subfigure}%
+\end{figure}
+\subsection{Newton Fraktale}
+Diese Fraktale erscheinen sich, wenn man das Newton Verfahren für Auffinden der Wurzeln der nichtlinearen Gleichungen auf Komplexe Ebene benutzt.
+Genauer gesagt, soll man die Wurzel für jeden Punkt des gesuchten Bildes mit Newton Verfahren finden.\\
+Zum Beispiel nehmen wir die Funktion $f(x) = x^3 -1$. Diese Funktion hat drei Lösungen auf Komplexe Ebene: $1$, $-\sqrt[3]{-1}$ und $(-1)^{2/3}$. Näherungswerte in Koordinatenform sind $(1, 0)$, $(-0.5, 0.866)$ und $(-0.5, -0.866)$. Die Punkte des Bildes, die sich durch das Newton Verfahren zu entsprechenden Wurzeln annähern, werden entsprechend mit rot, blau und grün gefärbt.
+Das Fraktal auf dem Bild \ref{fig:output3_0} repräsentiert die gewählte Umgebung.
+Die Ursachen zu dieser komischen Mischung werden in der Sektion \ref{sec:analy} erläutert.
+\begin{figure}[ht]   
+		\centering
+		\includegraphics[width=.6\linewidth]{figures/output3_0}
+		\caption{Newton Fraktal für $f(x)=x^3-1$ }
+		\label{fig:output3_0}
+\end{figure}
+\section{Visualisierung}\label{sec:vis}
+In diesem Abschnitt wird ein Programm entwickelt, das Bilder der Newton Fraktale generiert.
+Außerdem es wird ein Beispiel vorgestellt, wie man Animationen erzeugen kann.
+\subsection{Bildgenerierung}\label{subs:vis:bild}
+Als Programmiersprache wurde Java gewählt.
+
+\if 0
+
+\fi
+\subsection{Animation}\label{subs:vis:anime}
+\if 0
+
+\fi
+\section{Analyse}\label{sec:analy}
+\if 0
+
+\fi
+\section{Zusammenfassung}
+\if 0
+
+\fi
+% Literaturverzeichnis ------------------------------------------------
+\newpage
+\bibliographystyle{alphadinLinkLocal}
+\bibliography{literatur} 
+
+%\iffalse
+\end{document}
+%\fi

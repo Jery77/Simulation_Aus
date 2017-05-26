@@ -1,0 +1,23 @@
+\begin{thebibliography}{Tre92}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Bey]{fractal_mandelbrot}
+ \url{https://de.wikipedia.org/wiki/Datei:Mandelbrot_set_with_coloured_environment.png}
+
+\bibitem[fra]{fraktal}
+\emph{Fraktal}.
+\newblock  \url{https://de.wikipedia.org/wiki/Fraktal}. --
+\newblock Online--Ressource
+
+\bibitem[Mak]{fractal_romanesco}
+ \url{https://de.wikipedia.org/wiki/Datei:Romanesco.jpg}
+
+\bibitem[Tre92]{nummath}
+\textsc{Trefethen}, Lloyd:
+\newblock The definition of numerical analysis.
+\newblock {In: }\emph{SIAM News}  (1992)
+
+\end{thebibliography}
