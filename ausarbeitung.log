@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.4.3)  22 MAY 2017 19:26
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.4.3)  26 MAY 2017 18:32
 entering extended mode
 **./ausarbeitung.tex
 (ausarbeitung.tex
@@ -796,6 +796,34 @@ Package: doc 2016/02/15 v2.1g Standard LaTeX documentation package (FMi)
 \wrong@table=\toks28
 \c@CodelineNo=\count154
 )
+(C:\Users\Ярослав\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\listings
+.sty
+\lst@mode=\count155
+\lst@gtempboxa=\box61
+\lst@token=\toks29
+\lst@length=\count156
+\lst@currlwidth=\dimen160
+\lst@column=\count157
+\lst@pos=\count158
+\lst@lostspace=\dimen161
+\lst@width=\dimen162
+\lst@newlines=\count159
+\lst@lineno=\count160
+\lst@maxwidth=\dimen163
+
+(C:\Users\Ярослав\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\lstmisc.
+sty
+File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
+\c@lstnumber=\count161
+\lst@skipnumbers=\count162
+\lst@framebox=\box62
+)
+(C:\Users\Ярослав\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\listings
+.cfg
+File: listings.cfg 2015/06/04 1.6 listings configuration
+))
+Package: listings 2015/06/04 1.6 (Carsten Heinz)
+
 (C:\Users\Ярослав\AppData\Roaming\MiKTeX\2.9\tex\latex\caption\subcaptio
 n.sty
 Package: subcaption 2016/05/22 v1.1-161 Sub-captions (AR)
@@ -808,13 +836,13 @@ Package: caption 2016/02/21 v3.3-144 Customizing captions (AR)
 sty
 Package: caption3 2016/05/22 v1.7-166 caption3 kernel (AR)
 Package caption3 Info: TeX engine: e-TeX on input line 67.
-\captionmargin=\dimen160
-\captionmargin@=\dimen161
-\captionwidth=\dimen162
-\caption@tempdima=\dimen163
-\caption@indent=\dimen164
-\caption@parindent=\dimen165
-\caption@hangindent=\dimen166
+\captionmargin=\dimen164
+\captionmargin@=\dimen165
+\captionwidth=\dimen166
+\caption@tempdima=\dimen167
+\caption@indent=\dimen168
+\caption@parindent=\dimen169
+\caption@hangindent=\dimen170
 Package caption Info: Unknown document class (or package),
 (caption)             standard defaults will be used.
 )
@@ -827,43 +855,44 @@ Package caption Info: \@makecaption = \long macro:#1#2->\small \vskip \abovecap
 tionskip \sbox \@tempboxa {{\bfseries #1.} #2}\ifdim \wd \@tempboxa >\hsize {\b
 fseries #1.} #2\par \else \global \@minipagefalse \hb@xt@ \hsize {\hfil \box \@
 tempboxa \hfil }\fi \vskip \belowcaptionskip .
-\c@ContinuedFloat=\count155
+\c@ContinuedFloat=\count163
 Package caption Info: hyperref package is loaded.
+Package caption Info: listings package is loaded.
 )
-\c@subfigure=\count156
-\c@subtable=\count157
+\c@subfigure=\count164
+\c@subtable=\count165
 ) (ausarbeitung.aux)
 \openout1 = `ausarbeitung.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 88.
-LaTeX Font Info:    ... okay on input line 88.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 88.
-LaTeX Font Info:    ... okay on input line 88.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 88.
-LaTeX Font Info:    ... okay on input line 88.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 88.
-LaTeX Font Info:    ... okay on input line 88.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 88.
-LaTeX Font Info:    ... okay on input line 88.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 88.
-LaTeX Font Info:    ... okay on input line 88.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 88.
-LaTeX Font Info:    ... okay on input line 88.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 89.
+LaTeX Font Info:    ... okay on input line 89.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 89.
+LaTeX Font Info:    ... okay on input line 89.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 89.
+LaTeX Font Info:    ... okay on input line 89.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 89.
+LaTeX Font Info:    ... okay on input line 89.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 89.
+LaTeX Font Info:    ... okay on input line 89.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 89.
+LaTeX Font Info:    ... okay on input line 89.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 89.
+LaTeX Font Info:    ... okay on input line 89.
 
 (C:\Users\Ярослав\AppData\Roaming\MiKTeX\2.9\tex\context\base\supp-pdf.m
 kii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count158
-\scratchdimen=\dimen167
-\scratchbox=\box61
-\nofMPsegments=\count159
-\nofMParguments=\count160
-\everyMPshowfont=\toks29
-\MPscratchCnt=\count161
-\MPscratchDim=\dimen168
-\MPnumerator=\count162
-\makeMPintoPDFobject=\count163
-\everyMPtoPDFconversion=\toks30
+\scratchcounter=\count166
+\scratchdimen=\dimen171
+\scratchbox=\box63
+\nofMPsegments=\count167
+\nofMParguments=\count168
+\everyMPshowfont=\toks30
+\MPscratchCnt=\count169
+\MPscratchDim=\dimen172
+\MPnumerator=\count170
+\makeMPintoPDFobject=\count171
+\everyMPtoPDFconversion=\toks31
 ) ("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-base.sty"
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
@@ -877,8 +906,8 @@ Package grfext Info: Graphics extension search list:
 G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
 )
-\AtBeginShipoutBox=\box62
-Package hyperref Info: Link coloring ON on input line 88.
+\AtBeginShipoutBox=\box64
+Package hyperref Info: Link coloring ON on input line 89.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -886,24 +915,25 @@ Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 ("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty"
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count164
+\c@section@level=\count172
 )
-LaTeX Info: Redefining \ref on input line 88.
-LaTeX Info: Redefining \pageref on input line 88.
-LaTeX Info: Redefining \nameref on input line 88.
+LaTeX Info: Redefining \ref on input line 89.
+LaTeX Info: Redefining \pageref on input line 89.
+LaTeX Info: Redefining \nameref on input line 89.
 
 (ausarbeitung.out) (ausarbeitung.out)
 \@outlinefile=\write4
 \openout4 = `ausarbeitung.out'.
 
+\c@lstlisting=\count173
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Font Info:    Try loading font information for U+msa on input line 104.
+LaTeX Font Info:    Try loading font information for U+msa on input line 105.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 104.
+LaTeX Font Info:    Try loading font information for U+msb on input line 105.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -912,22 +942,22 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 File: figures/Romanesco.jpg Graphic file (type jpg)
 
 <use figures/Romanesco.jpg>
-Package pdftex.def Info: figures/Romanesco.jpg used on input line 142.
+Package pdftex.def Info: figures/Romanesco.jpg used on input line 143.
 (pdftex.def)             Requested size: 87.6331pt x 132.63675pt.
  <figures/Mandelbrot.png, id=17, 963.6pt x 722.7pt>
 File: figures/Mandelbrot.png Graphic file (type png)
 
 <use figures/Mandelbrot.png>
-Package pdftex.def Info: figures/Mandelbrot.png used on input line 148.
+Package pdftex.def Info: figures/Mandelbrot.png used on input line 149.
 (pdftex.def)             Requested size: 87.6331pt x 65.72389pt.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 153.
+(babel)             in language  on input line 154.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 153.
+(babel)             in language  on input line 154.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 153.
+(babel)             in language  on input line 154.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 153.
+(babel)             in language  on input line 154.
  [1
 
 {C:/Users/Ярослав/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
@@ -935,66 +965,87 @@ Package babel Info: Redefining ngerman shorthand "~
 File: figures/output3_0.png Graphic file (type png)
 
 <use figures/output3_0.png>
-Package pdftex.def Info: figures/output3_0.png used on input line 161.
-(pdftex.def)             Requested size: 262.90602pt x 262.8922pt.
+Package pdftex.def Info: figures/output3_0.png used on input line 162.
+(pdftex.def)             Requested size: 219.08612pt x 219.0666pt.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 178.
+(babel)             in language  on input line 171.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 178.
+(babel)             in language  on input line 171.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 178.
+(babel)             in language  on input line 171.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 178.
- [2 <./figures/Romanesco.jpg> <./figures/Mandelbrot.png>] (ausarbeitung.bbl
+(babel)             in language  on input line 171.
+ [2 <./figures/Romanesco.jpg> <./figures/Mandelbrot.png>]
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
+nput line 177.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 192.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 192.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 192.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 192.
+ [3 <./figures/output3_0.png>]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 222.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 222.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 222.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 222.
+ [4] (ausarbeitung.bbl
 LaTeX Font Info:    Try loading font information for T1+cmtt on input line 8.
- ("C:\Program Files\MiKTeX 2.9\tex\latex\base\t1cmtt.fd"
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\t1cmtt.fd"
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 ))
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 183.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 227.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 183.
+(babel)             in language  on input line 227.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 183.
+(babel)             in language  on input line 227.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 183.
+(babel)             in language  on input line 227.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 183.
- [3 <./figures/output3_0.png>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 183.
+(babel)             in language  on input line 227.
+ [5]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 227.
  (ausarbeitung.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 183.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 183.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 227.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 227.
 Package rerunfilecheck Info: File `ausarbeitung.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 183.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 227.
  ) 
 Here is how much of TeX's memory you used:
- 9774 strings out of 493333
- 138457 string characters out of 3139168
- 267324 words of memory out of 3000000
- 13122 multiletter control sequences out of 15000+200000
+ 11380 strings out of 493333
+ 159628 string characters out of 3139168
+ 289172 words of memory out of 3000000
+ 14698 multiletter control sequences out of 15000+200000
  19082 words of font info for 53 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 42i,9n,42p,413b,540s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 42i,9n,42p,413b,1012s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/cm-super/cm-super-t1.enc}<C:/Pro
 gram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Fil
-es/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX
- 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/font
-s/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pu
-blic/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfo
-nts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
-msy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/cm-super/sfbx0900.pfb>
-<C:/Program Files/MiKTeX 2.9/fonts/type1/public/cm-super/sfbx1200.pfb><C:/Progr
-am Files/MiKTeX 2.9/fonts/type1/public/cm-super/sfbx1440.pfb><C:/Program Files/
-MiKTeX 2.9/fonts/type1/public/cm-super/sfbx1728.pfb><C:/Program Files/MiKTeX 2.
-9/fonts/type1/public/cm-super/sfcc0900.pfb><C:/Program Files/MiKTeX 2.9/fonts/t
-ype1/public/cm-super/sfrm0900.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publ
-ic/cm-super/sfrm1200.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/cm-sup
-er/sfti0900.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/cm-super/sftt09
-00.pfb>
-Output written on ausarbeitung.pdf (3 pages, 2328791 bytes).
+es/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Program Files/MiKTeX
+ 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/font
+s/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/p
+ublic/amsfonts/cm/cmr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsf
+onts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cm
+sy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+<C:/Program Files/MiKTeX 2.9/fonts/type1/public/cm-super/sfbx0900.pfb><C:/Progr
+am Files/MiKTeX 2.9/fonts/type1/public/cm-super/sfbx1200.pfb><C:/Program Files/
+MiKTeX 2.9/fonts/type1/public/cm-super/sfbx1440.pfb><C:/Program Files/MiKTeX 2.
+9/fonts/type1/public/cm-super/sfbx1728.pfb><C:/Program Files/MiKTeX 2.9/fonts/t
+ype1/public/cm-super/sfcc0900.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publ
+ic/cm-super/sfrm0900.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/cm-sup
+er/sfrm1200.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/cm-super/sfti09
+00.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/cm-super/sftt0900.pfb>
+Output written on ausarbeitung.pdf (5 pages, 2364865 bytes).
 PDF statistics:
- 131 PDF objects out of 1000 (max. 8388607)
- 20 named destinations out of 1000 (max. 500000)
+ 170 PDF objects out of 1000 (max. 8388607)
+ 38 named destinations out of 1000 (max. 500000)
  16 words of extra memory for PDF output out of 10000 (max. 10000000)
 

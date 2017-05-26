@@ -28,8 +28,9 @@
 \usepackage{dsfont}  
 %\newtheorem{definition}{Definition}
 \usepackage{doc}
-
+\usepackage{listings}
 \usepackage{subcaption}
+\usepackage{url}
 
 % Seitenformat ===============================================================
 \hoffset=-1.25truecm
@@ -157,20 +158,54 @@ Zum Beispiel nehmen wir die Funktion $f(x) = x^3 -1$. Diese Funktion hat drei L�
 Das Fraktal auf dem Bild \ref{fig:output3_0} repräsentiert die gewählte Umgebung.
 Die Ursachen zu dieser komischen Mischung werden in der Sektion \ref{sec:analy} erläutert.
 \begin{figure}[ht]   
-		\centering
-		\includegraphics[width=.6\linewidth]{figures/output3_0}
-		\caption{Newton Fraktal für $f(x)=x^3-1$ }
-		\label{fig:output3_0}
+	\centering
+	\includegraphics[width=.5\linewidth]{figures/output3_0}
+	\caption{Newton Fraktal für $f(x)=x^3-1$ }
+	\label{fig:output3_0}
 \end{figure}
 \section{Visualisierung}\label{sec:vis}
 In diesem Abschnitt wird ein Programm entwickelt, das Bilder der Newton Fraktale generiert.
 Außerdem es wird ein Beispiel vorgestellt, wie man Animationen erzeugen kann.
 \subsection{Bildgenerierung}\label{subs:vis:bild}
 Als Programmiersprache wurde Java gewählt.
-
-\if 0
-
-\fi
+\subsubsection{Bibliotheken}
+Zusätzlich zu allgemeine Java-Bibliothek wurde noch das\\ $javax$.$imageio$.$ImageIO$ verwendet.
+Das ist öffentliche Bibliothek für die Arbeit mit Bildern, das unter anderem für das .$png$ Format geeignet ist.
+Das PNG (Portable Network Graphics) Format passt für unsere Ziele ideal, wegen kleines Gewicht und keinen Qualitätsverlust.
+\subsubsection{Bild}
+Mit Hilfe der $javax$.$imageio$.$ImageIO$ kann man sehr einfach die .$png$ Dateien erzeugen. Ein Beispiel in der Auflistung \ref{lst:png}.
+\begin{lstlisting}[caption=Ein Beispiel für PNG Generierung, label=lst:png]
+BufferedImage bi = new BufferedImage(w, h, TYPE_INT_ARGB) ;
+ImageIO.write(bi, "png", outputfilename);
+\end{lstlisting}
+Um den Bildinhalt zu generieren, benutzen wir den $bi.setRGB(X, Z, Color);$ Befehl.\\
+Natürlich soll man bestimmten Bereich wählen, um dann zu zeichnen. 
+Bei unseres Programm wählt man den Startpunkt durch $X$ und $Y$ Koordinatenwerte, die Bildschirmgröße: $Size$ und die Auflösung: $resolution$. 
+\subsubsection{Komplexe Zahlen}
+Für die Bearbeitung der komplexen Zahlen wurden die entsprechende Klasse implementiert, die die Arbeit mit komplexen Zahlen erleichtert. 
+Man kann komplexe Zahlen addieren, abrechnen, multiplizieren, dividieren und potenzieren.
+\subsubsection{Newton Verfahren}
+Um Newton Verfahren zu benutzen, soll man manuell die Ableitung berechnen, die Newton iterative Funktion ausfinden und im Programmkode umwandeln.
+Als Beispiel nehmen wir die Funktion $f(z) = z^3 - 2z + 2$.
+Entspreche Ableitung hat die Form $f'(z) = 3z^2 - 2$ und die iterative Funktion $z_{n+1} = \frac{2z_n^3 - 2}{3z_n^2 - 2}$.
+Und hier steht der Programmkode für diese iterative Funktion.
+\[
+	devide(mult(hoch(wert,3),2).add(-2), mult(hoch(wert,2),3).add(-2));
+\]
+Natürlich nach jedem Schritt soll man Prüfen, ob die maximale Anzahl der Schritten $deep$ nicht überschreitet wird und ob der Punkt schon genug nah zu Nullstelle liegt. 
+Das heißt, dass es für jeden gefundenen Punkt $z_n$ soll geprüft werden, ob $n > deep$ ist und $f|(z_n)| < toleranz$.
+Falls einer der beiden Fälle eintritt, bricht man die iterative Berechnung ab.
+Im ersten Fall bezeichnet man das Punkt mit weiße Farbe, im zweiten - mit Farbe assoziierte mit gefundener Lösung. 
+\subsubsection{Lösungen} 
+Da man manuell Farben für unterschiedliche Lösungen wählen will, war es entschieden, alle Lösungen mit assoziierten Farben im Programmkode eintragen. 
+Ein Beispiel für die Funktion $z^3 - 1$ findet man in der Auflistung \ref{lst:punkt}
+\begin{lstlisting}[caption=Lösungen mit Farben für $z^3 - 1$, label=lst:punkt]
+points.add(new point(1,	   0,	   255, 0,   0));
+points.add(new point(-0.5, 0.866,  0,   255, 0));
+points.add(new point(-0.5, -0.866, 0,   0,   255));
+\end{lstlisting}
+\subsubsection{Programmkode}
+Vollständige Programmkode kann man unter \cite{source} finden.
 \subsection{Animation}\label{subs:vis:anime}
 \if 0
 
