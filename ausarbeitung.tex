@@ -132,7 +132,9 @@ Man soll manuell den Startwert $x_0$ wählen und dann die iterative Methode benu
 x_{n+1} = x_n + \frac{f(x_n)}{f'(x_n)}
 \] 
 Gewöhnlich wählt man eine zulässige Abweichung $\varepsilon$ und eine maximale Anzahl der Schritte $N$.
-Nach jedem Schritt der iterative Methode prüft man. Falls $f(x_n)  < \varepsilon$, dann ist die Lösung gefunden. Und falls $n > N$, dann ist die Lösung unauffindbar in akzeptable Anzahl der Schritte. 
+Nach jedem Schritt der iterative Methode prüft man. Falls $f(x_n)  < \varepsilon$, dann ist die Lösung gefunden.
+Und falls $n > N$, dann ist die Lösung unauffindbar in akzeptable Anzahl der Schritte. 
+Iterative Prozess der Annäherung von $x_n$ zu $x_n+1$ heißt die Konvergenz, und falls $x_0$ zu $x_n$ kommt, heißt das, dass $x_0$ gegen $x_n$ konvergiert.
 \subsection{Fraktale}
 Fraktal (lateinisch $fractus$ - gebrochen) ist ein von Mathematiker Benoît Mandelbrot geprägter Begriff, der bestimmte natürliche oder künstliche Gebilde oder Muster bezeichnet. Diese Gebilde oder Muster weisen einen hohen Grad von Skaleninvarianz bzw. Selbstähnlichkeit. 
 Das ist beispielsweise der Fall, wenn ein Objekt aus mehreren verkleinerten Kopien seiner selbst besteht. \cite{fraktal} \\
@@ -204,16 +206,69 @@ points.add(new point(1,	   0,	   255, 0,   0));
 points.add(new point(-0.5, 0.866,  0,   255, 0));
 points.add(new point(-0.5, -0.866, 0,   0,   255));
 \end{lstlisting}
+\subsubsection{Schatten}
+Für bessere Informationswiedergabe kann man die Schatten einschalten.
+Dann je mehr Schritten des Newtonverfahren nötig sind, desto dunkler das Pixel wird.  
 \subsubsection{Programmkode}
 Vollständige Programmkode kann man unter \cite{source} finden.
 \subsection{Animation}\label{subs:vis:anime}
-\if 0
-
-\fi
+Einer der einfachsten Wegen für die Animationserzeugung wurde gewählt. 
+Das Programm wurde so geändert, dass $size$ und $outputfilename$ variabel werden. 
+Dann im Zyklus wird eine Reihenfolge der Bildern generiert, so dass neues Bild die Annäherung des Alten wird.
+Dann aus diese Reihenfolge mit Hilfe des \cite{animegen} wurde die Animation generiert.
 \section{Analyse}\label{sec:analy}
-\if 0
+Es werden manche Newton Fraktale vorgestellt und analysiert.
+\subsection{$z^3 - 1 = 0$}
+Wie oben schon gesagt war, hat diese Gleichung drei Lösungen auf Komplexe Ebene: $+1$, $-\sqrt[3]{-1}$ und $(-1)^{2/3}$ und war auf dem Bild \ref{fig:output3_0} visualisiert. 
+Wenn man versucht die Grenze zwischen zwei Zonen zu annähern, sieht man, dass dort immer dritte Zone vorkommt. 
+Das wiederholt sich rekursiv bei Annäherung.
+In anderen Worten, wenn man einen Anfangspunkts $z_0$ wählt, der gegen $+1$ konvergiert und einen Punkt $z_1$, der gegen  $-\sqrt[3]{-1}$ konvergiert, dann existiert es immer einen dritten Punkt $z_2$, der noch näher zu $z_0$ als $z_1$ liegt und zu $(-1)^{2/3}$ konvergiert. \\
+Wichtigste Frage ist: warum sehen die Zonen nicht wie die einfachen 120-Grad-Sektoren aus?
+Anfang letztes Jahrhunderts gelang es zwei französischen Mathematiker Gaston Julia und Pierre Fatou zu zeigen, dass die Grenzpunkten eines Einzugsgebiets die Grenzpunkte aller Einzugsgebiete sind. 
+Folglich können Iterationen mit mehr als zwei Einzugsgebieten keine einfach zusammenhängenden Liniensegmente als Gebietsgrenzen in 2D haben. 
+Solche Grenzen müssen zwangsläufig fraktalen Natur sein, bestehend aus vollständig separaten Punktmengen - sozusagen eine unendlich feine Staubwolke aus nichtabzählbar vielen Staubpartikelchen.~\cite{frak_cha}
+Machen wir uns damit ein bisschen vertraut, indem wir die Nullstelle (der Punkt $0:0$) anschauen.
+Logischerweise soll die Nullstelle zwischen allen Zonen liegen und Null selbst konvergiert überhaupt nicht, da bei Newton Verfahren für diese Funktion, $z=0$ zu Division durch Null folgt.
+Aber diese Nullstelle ist nicht allein, außerdem existieren noch unendlich viele Punkte, die gegen die Null konvergieren und für die auch gilt, dass daneben sich alle Zonen befinden.
+(Das folgt aus die lineare Natur des Newton Verfahrens.)
+Diese Punkten, die gegen die Null konvergieren, bilden diese komische Grenze Zwischen Zonen. 
+Zum Beispiel betrachten wir ein paar Punkte. 
+Konvergenz des Punktes (1, 1) wird auf dem Bild \ref{fig:output_points3} vorgestellt.
+\begin{figure}[ht]   
+	\centering
+	\includegraphics[width=.5\linewidth]{figures/output_points3}
+	\caption{Konvergenz des Punktes (1, 1) für $f(x)=x^3-1$ }
+	\label{fig:output_points3}
+\end{figure}
+Der Punkt liegt weit genug von der Grenze und wird eindeutig konvergiert, trotzdem sieht man so ein Sprung, die sehr oft bei Newton Verfahren eintreten werden.\\
+Jetzt betrachten das Punkt (0.9, 1) auf dem Bild \ref{fig:output_points_g3}.
+  \begin{figure}[ht]   
+  	\centering
+  	\includegraphics[width=.5\linewidth]{figures/output_points_g3}
+  	\caption{Die Konvergenz des Punktes (0.9, 1) für $f(x)=x^3-1$ }
+  	\label{fig:output_points_g3}
+  \end{figure}
+Die Konvergenz des Punktes zeigt eindeutig, wie die iterative Schritte des Newton Verfahrens funktionieren und wie man zu solchen Bildern kommt. 
+Erste drei Punkte sind gleich zu die Konvergenz des Punktes (1, 1), was die lineare Natur des Newton Verfahrens bekräftigt, aber dann, neben der Nullstelle, wird die Konvergenz nach grünen Gebiet geworfen.
+Die Punkten neben Grenzen bewegen sich zuerst in die Richtung der Nullstelle und dann rasant in die passende Zone springen.\\
+Zusätzliches Beispiel wird auf Bild \ref{fig:output3_3} vorgestellt, wo helle Bereiche am schnellsten zu Lösungen konvergierende Punkte bezeichnen.
+\begin{figure}[ht]   
+	\centering
+	\includegraphics[width=.5\linewidth]{figures/output3_3}
+	\caption{Die Konvergenzgeschwindigkeit durch die Helligkeit für $f(x)=x^3-1$ }
+	\label{fig:output3_3}
+\end{figure}
 
-\fi
+\subsection{$z^5 -1 = 0$}
+Das Bild \ref{fig:output5_3} illustriert das Newton Fraktal. 
+Einziegen Unterschied liegt in der Anzahl der Zonen und Lösungen: hier gibt es 5 beides.
+Wie bei $z^3 -1 = 0$ sind die Grenzpunkten eines Einzugsgebiets die Grenzpunkte aller Einzugsgebiete.
+\begin{figure}[ht]   
+	\centering
+	\includegraphics[width=.5\linewidth]{figures/output5_3}
+	\caption{Das Newton Fraktal für $f(x)=x^3-1$ }
+	\label{fig:output5_3}
+\end{figure}
 \section{Zusammenfassung}
 \if 0
 
