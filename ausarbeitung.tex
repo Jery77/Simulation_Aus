@@ -142,13 +142,13 @@ Figure \ref{fig:frac_kunst} stellt ein Beispiel für ein künstliches Fraktal, u
 \begin{figure}[ht]   
 	\begin{subfigure}{.5\textwidth}
 	\centering
-	\includegraphics[width=.4\linewidth]{figures/Romanesco}
+	\includegraphics[width=.6\linewidth]{figures/Romanesco}
 	\caption{Romanesco. Ein natürliches Fraktal. \cite{fractal_romanesco}}
 	\label{fig:frac_kunst}
 \end{subfigure}%
 \begin{subfigure}{.5\textwidth}
 	\centering
-	\includegraphics[width=.4\linewidth]{figures/Mandelbrot}
+	\includegraphics[width=.9\linewidth, angle =90 ]{figures/Mandelbrot}
 	\caption{Mandelbrot. Ein künstliches Fraktal. \cite{fractal_mandelbrot}}
 	\label{fig:frac_math}
 \end{subfigure}%
@@ -233,41 +233,68 @@ Aber diese Nullstelle ist nicht allein, außerdem existieren noch unendlich viel
 (Das folgt aus die lineare Natur des Newton Verfahrens.)
 Diese Punkten, die gegen die Null konvergieren, bilden diese komische Grenze Zwischen Zonen. 
 Zum Beispiel betrachten wir ein paar Punkte. 
-Konvergenz des Punktes (1, 1) wird auf dem Bild \ref{fig:output_points3} vorgestellt.
+Die Konvergenz des Punktes (1, 1) wird auf dem Bild \ref{fig:output_points3} vorgestellt.
 \begin{figure}[ht]   
+	\begin{subfigure}{.5\textwidth}
 	\centering
-	\includegraphics[width=.5\linewidth]{figures/output_points3}
-	\caption{Konvergenz des Punktes (1, 1) für $f(x)=x^3-1$ }
-	\label{fig:output_points3}
+		\includegraphics[width=.7\linewidth]{figures/output_points3}
+		\captionsetup{width=0.8\textwidth}
+		\caption{Die Konvergenz des Punktes (1, 1) für $f(x)=x^3-1$ }
+		\label{fig:output_points3}
+	\end{subfigure}%
+	\begin{subfigure}{.5\textwidth}
+  	\centering
+		\includegraphics[width=.7\linewidth]{figures/output_points_g3}
+		\captionsetup{width=0.8\textwidth}
+		\caption{Die Konvergenz des Punktes (0.9, 1) für $f(x)=x^3-1$ }
+		\label{fig:output_points_g3}
+	\end{subfigure}%
 \end{figure}
 Der Punkt liegt weit genug von der Grenze und wird eindeutig konvergiert, trotzdem sieht man so ein Sprung, die sehr oft bei Newton Verfahren eintreten werden.\\
-Jetzt betrachten das Punkt (0.9, 1) auf dem Bild \ref{fig:output_points_g3}.
-  \begin{figure}[ht]   
-  	\centering
-  	\includegraphics[width=.5\linewidth]{figures/output_points_g3}
-  	\caption{Die Konvergenz des Punktes (0.9, 1) für $f(x)=x^3-1$ }
-  	\label{fig:output_points_g3}
-  \end{figure}
+Jetzt betrachten wir das Punkt (0.9, 1) auf dem Bild \ref{fig:output_points_g3}.
 Die Konvergenz des Punktes zeigt eindeutig, wie die iterative Schritte des Newton Verfahrens funktionieren und wie man zu solchen Bildern kommt. 
 Erste drei Punkte sind gleich zu die Konvergenz des Punktes (1, 1), was die lineare Natur des Newton Verfahrens bekräftigt, aber dann, neben der Nullstelle, wird die Konvergenz nach grünen Gebiet geworfen.
 Die Punkten neben Grenzen bewegen sich zuerst in die Richtung der Nullstelle und dann rasant in die passende Zone springen.\\
-Zusätzliches Beispiel wird auf Bild \ref{fig:output3_3} vorgestellt, wo helle Bereiche am schnellsten zu Lösungen konvergierende Punkte bezeichnen.
+Zusätzliches Beispiel wird auf Bild \ref{fig:output3_3} vorgestellt, wo die helle Bereiche am schnellsten zu Lösungen konvergierende Punkte bezeichnen.
 \begin{figure}[ht]   
+	\begin{subfigure}{.5\textwidth}
 	\centering
-	\includegraphics[width=.5\linewidth]{figures/output3_3}
-	\caption{Die Konvergenzgeschwindigkeit durch die Helligkeit für $f(x)=x^3-1$ }
-	\label{fig:output3_3}
+		\includegraphics[width=.7\linewidth]{figures/output3_3}
+		\captionsetup{width=0.8\textwidth}
+		\caption{Die Konvergenzgeschwindigkeit durch die Helligkeit für $f(x)=x^3-1$ }
+		\label{fig:output3_3}
+	\end{subfigure}%
+	\begin{subfigure}{.5\textwidth}
+	\centering
+		\includegraphics[width=.7\linewidth]{figures/output5_3}
+		\captionsetup{width=0.8\textwidth}
+		\caption{Das Newton Fraktal für $f(x)=x^5-1$ }
+		\label{fig:output5_3}
+	\end{subfigure}%
 \end{figure}
 
 \subsection{$z^5 -1 = 0$}
-Das Bild \ref{fig:output5_3} illustriert das Newton Fraktal. 
+Das Bild \ref{fig:output5_3} illustriert das entsprechende Newton Fraktal. 
 Einziegen Unterschied liegt in der Anzahl der Zonen und Lösungen: hier gibt es 5 beides.
-Wie bei $z^3 -1 = 0$ sind die Grenzpunkten eines Einzugsgebiets die Grenzpunkte aller Einzugsgebiete.
+Wie bei $z^3 -1 = 0$ sind die Grenzpunkten eines Einzugsgebiets die Grenzpunkte aller Einzugsgebiete, was für die fünf Zonen interessanter aussieht.
+
+\subsection{$z^5 + (5+2i)*z^3 - 2-i $}
+Das entsprechende Newton Fraktal (Bild \ref{fig:output_f7}) hat eine interessante Struktur. 
+Der Grund dazu liegt in der Position der Lösungen.
+Die Nullstelle, die grüne und die rote Zonen liegen fast auf eine Gerade.
+Die Gleiche gilt für die Nullstelle, die blaue und die hellblaue Zonen.
+Unabhängig davon, dass die hellblaue und die grüne Zonen weit weg von der Nullstelle liegen, konvergieren manche Punkte neben der Nullstelle gegen Grün und Hellblau.
 \begin{figure}[ht]   
-	\centering
-	\includegraphics[width=.5\linewidth]{figures/output5_3}
-	\caption{Das Newton Fraktal für $f(x)=x^3-1$ }
-	\label{fig:output5_3}
+	\begin{subfigure}{.5\textwidth}
+		\centering
+		\includegraphics[width=.7\linewidth]{figures/output_f7}
+		\captionsetup{width=0.8\textwidth}
+		\caption{Das Newton Fraktal für $f(x)=x^5 + (5+2i)x^3 - 2-i $ }
+		\label{fig:output_f7}
+	\end{subfigure}%
+	\begin{subfigure}{.5\textwidth}
+
+	\end{subfigure}%
 \end{figure}
 \section{Zusammenfassung}
 \if 0
