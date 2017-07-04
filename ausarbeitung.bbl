@@ -5,18 +5,15 @@
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
 
 \bibitem[ani]{animegen}
- \url{https://toolson.net/GifAnimation/Create}
+\emph{FREE ONLINE APPLICATION SERVICE}.
+\newblock  \url{https://toolson.net/GifAnimation/Create}
 
-\bibitem[Bey]{fractal_mandelbrot}
- \url{https://de.wikipedia.org/wiki/Datei:Mandelbrot_set_with_coloured_environment.png}
-
-\bibitem[fra]{fraktal}
-\emph{Fraktal}.
+\bibitem[Fal03]{fraktal}
+\textsc{Falconer}, Kenneth:
+\newblock \emph{Fractal Geometry: Mathematical Foundations and Applications}.
+\newblock \,Version:\,2003.
 \newblock  \url{https://de.wikipedia.org/wiki/Fraktal}. --
 \newblock Online--Ressource
-
-\bibitem[Mak]{fractal_romanesco}
- \url{https://de.wikipedia.org/wiki/Datei:Romanesco.jpg}
 
 \bibitem[Nal]{source}
 \textsc{Nalivayko}, Yaroslav:
@@ -26,7 +23,7 @@
 
 \bibitem[Sch94]{frak_cha}
 \textsc{Schroeder}, Manfred ; \textsc{Schlierf}, Markus (Hrsg.):
-\newblock \emph{Fraktale, Chaosund Selbstähnlichkeit}.
+\newblock \emph{Fraktale, Chaos und Selbstähnlichkeit}.
 \newblock Spektrum, 1994
 
 \bibitem[Tre92]{nummath}
