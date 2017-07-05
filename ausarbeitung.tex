@@ -116,7 +116,7 @@
 
 \begin{abstract}
 %In dieser Arbeit werden Newton-Fraktale behandelt.
-Wenn man das Newton-Verfahren für die Lösung der nichtlinearen Gleichungen auf der komplexen Ebene einsetzt und versucht die Ergebnisse zu visualisieren, erscheinen sehr interessante Figuren, die eine selbstähnliche Struktur besitzen.
+Wenn man das Newton-Verfahren für die Lösung der nichtlinearen Gleichungen auf der komplexen Ebene einsetzt und versucht, die Ergebnisse zu visualisieren, erscheinen sehr interessante Figuren, die eine selbstähnliche Struktur besitzen.
 Solche Figuren heißen Newton-Fraktale, die in dieser Arbeit behandelt werden.
 Es werden Ursachen für ihre Struktur benannt und manche Beispiele analysiert. 
 %die sind die Teilmenge der mathematischen Fraktale, die durch die Einsetzung des Newton-Verfahrens für die Lösung der nichtlinearen Gleichungen auf der komplexen Ebene erscheinen.
@@ -131,14 +131,14 @@ In der letzten Sektion findet die \nameref{sec:analy} mancher interessanten Funk
 
 \section{Theoretische Grundlagen}\label{sec:theo}
 Hier werden wichtigste Grundbegriffe erläutert. 
-Der Anwendungsgebiet der numerischen Mathematik wird gezeigt.
-Das Arbeitsprinzip des Newtonverfahrens wird aufklärt und veranschaulicht.
+Das Anwendungsgebiet der numerischen Mathematik wird gezeigt.
+Das Arbeitsprinzip des Newtonverfahrens wird aufgeklärt und veranschaulicht.
 Dann werden natürliche und künstliche Fraktale vorgestellt und Newton-Fraktale präsentiert.
 
 \subsection{Numerische Mathematik}
 Die numerische Mathematik beschäftigt sich als Teilgebiet der Mathematik mit der Konstruktion und Analyse von Algorithmen für kontinuierliche mathematische Probleme.~\cite{nummath}
 Sie wird oft benutzt, um approximative Lösungen mit Hilfe des Rechners zu finden.
-Im Vergleich zu analytischen Lösungen helfen approximative Verfahren nur eine Näherung der Lösung zu finden.
+Im Vergleich zu analytischen Lösungen helfen approximative Verfahren nur damit, eine Näherung der Lösung zu finden.
 Gewöhnlich haben diese Methoden eine iterative Form, das heißt, dass nach jedem Iterationsschritt bekommt man eine genauere Lösung.
 Numerische Mathematik wird oft benutzt, wenn, zum Beispiel, eine Gleichung schwer zu lösen ist, wenn eine Näherungslösung akzeptabel ist oder wenn man einen Rechner für die Determination der Lösung benutzen will.
 
@@ -156,9 +156,9 @@ x_{n+1} = x_n - \frac{f(x_n)}{f'(x_n)}
 Auf jedem Iterationsschritt wird eine Tangente zu $f(x)$ im Punkt $x_n$ gebildet.
 Die Tangente schneidet die x-Achse im Punkt $x_{n+1}$. 
 Beispiel auf dem Bild~\ref{fig:newton}.
-Das zeigt, dass für eine stetig differenzierbare Funktion das Punkt $x_{n+1}$ näher zu einer Nullstelle als das Punkt $x_n$ liegt.
-Nach dem nächsten Iterationsschritt wird das Punkt $x_{n+2}$ berechnet, der noch näher wird.\\
-Gewöhnlich wählt man eine zulässige "Fehler" $\varepsilon>0$ und eine maximale Anzahl der Schritte $N$.
+Das zeigt, dass für eine stetig differenzierbare Funktion der Punkt $x_{n+1}$ näher zu einer Nullstelle als den Punkt $x_n$ liegt.
+Nach dem nächsten Iterationsschritt wird den Punkt $x_{n+2}$ berechnet, der noch näher wird.\\
+Gewöhnlich wählt man einen zulässigen "Fehler" $\varepsilon>0$ und eine maximale Anzahl der Schritte $N$.
 Nach jedem Schritt der iterativen Methode prüft man, ob $f(x_n)  < \varepsilon$ ist. 
 In diesem Fall ist die Lösung gefunden.
 Und falls $n > N$ ist, dann wird die Lösung in der akzeptablen Anzahl der Schritte unauffindbar. 
@@ -197,7 +197,7 @@ Diese Fraktale erscheinen, wenn man das Newton-Verfahren für Auffinden der Null
 Die komplexe Zahlen werden verwendet, um ein 2D Bild zu bekommen.
 Realer Betrag der Zahl wird als die x-Koordinate benutzt und imaginärer Betrag - als die y-Koordinate.
 Dann wählt man den Bereich und die Auflösung des gesuchten Bildes (zum Beispiel ein Quadrat mit $x\in\{-1;+1\}$ und $y\in\{-1;+1\}$ mit der Auflösung $100x100$) und bemalt es.
-Genauer gesagt, benutzt man die Position jedes Pixels des Bildes als der Startwert für das Newton-Verfahren und schaut gegen welche Nullstelle es konvergiert.\\
+Genauer gesagt, benutzt man die Position jedes Pixels des Bildes als der Startwert für das Newton-Verfahren und schaut, gegen welche Nullstelle es konvergiert.\\
 Zum Beispiel nehmen wir die Funktion $f(x) = x^3 -1$. 
 Diese Funktion hat drei Lösungen auf der komplexen Ebene: $1$, $-\sqrt[3]{-1}$ und $(-1)^{2/3}$. 
 Die Näherungswerte im Koordinatenform sind $(1, 0)$, $(-0.5, 0.866)$ und $(-0.5, -0.866)$. 
@@ -241,7 +241,7 @@ So kann man komplexe Zahlen addieren, subtrahieren, multiplizieren, dividieren u
 
 \subsubsection{Newton-Verfahren}
 Um das Newton-Verfahren zu benutzen, muss man manuell die Ableitung berechnen, die iterative Newton-Funktion ausfinden und sie im Programmkode umwandeln.
-Außerdem assoziiert man mit jeder Wurzel eine Farbe, um später das Bild zu zeichnen.
+Außerdem assoziiert man mit jeder Nullstelle eine Farbe, um später das Bild zu zeichnen.
 Als Beispiel nehmen wir die Funktion $f(z) = z^3 - 2z + 2$.
 Die entsprechende Ableitung hat die Form $f'(z) = 3z^2 - 2$ und die iterative Funktion des Newton-Verfahrens $z_{n+1} = \frac{2z_n^3 - 2}{3z_n^2 - 2}$.
 Und hier steht der Programmkode für die iterative Funktion.
@@ -249,17 +249,17 @@ Und hier steht der Programmkode für die iterative Funktion.
 devide(mult(pow(X,3),2).add(-2),mult(pow(X,2),3).add(-2));
 \end{lstlisting}
 Die Funktion wird iterativ für jedes Pixel des Bildes verwendet, um die Farbe zu berechnen.
-Natürlich muss man nach jedem Schritt prüfen, ob die maximale Anzahl der Schritte $N$ nicht überschritten ist und ob der Punkt schon die Wurzel ist. 
+Natürlich muss man nach jedem Schritt prüfen, ob die maximale Anzahl der Schritte $N$ nicht überschritten ist und ob der Punkt schon die Nullstelle ist. 
 Das heißt, dass es für jeden gefundenen Punkt $z_n$ geprüft werden muss, ob $n > N$ oder $f|(z_n)| < \varepsilon$ ist.
 Falls einer der beiden Fälle eintritt, bricht man die iterative Berechnung ab.
-Im ersten Fall bezeichnet man den Punkt mit der weißen Farbe, im zweiten - mit der Farbe, mit der man die gefundenen Wurzel assoziiert. 
+Im ersten Fall bezeichnet man den Punkt mit der weißen Farbe, im zweiten - mit der Farbe, mit der man die gefundene Nullstelle assoziiert. 
 
 \subsubsection{Lösungen} 
-Da man die Farben für unterschiedliche Wurzeln manuell wählen will, muss man alle Wurzeln mit assoziierten Farben in den Programmkode eintragen. 
+Da man die Farben für unterschiedliche Nullstellen manuell wählen will, muss man alle Nullstellen mit assoziierten Farben in den Programmkode eintragen. 
 Ein Beispiel für die Funktion $z^3 - 1$ findet man in der Auflistung~\ref{lst:punkt}. 
-Jede Wurzel wird durch zwei Zahlen festgestellt, die reale und imaginäre Parts abbilden.
-Letzte drei Argumente definieren die Farbe der Wurzel im RGB Format.
-\begin{lstlisting}[caption=Wurzeln mit Farben für $z^3 - 1$, label=lst:punkt,captionpos=b]
+Jede Nullstelle wird durch zwei Zahlen festgestellt, die reale und imaginäre Parts abbilden.
+Letzte drei Argumente definieren die Farbe der Nullstelle im RGB Format.
+\begin{lstlisting}[caption=Nullstellen mit Farben für $z^3 - 1$, label=lst:punkt,captionpos=b]
 \\Position X, Position Y, rot, gruen, blau
 points.add(new point(   1,     0,255,  0,0)); 
 points.add(new point(-0.5, 0.866,  0,255,0));
@@ -291,12 +291,12 @@ x_{n+1} = \frac{x_n^3+1}{3 x_n^2}
 Entsprechendes Newton-Fraktal ist auf dem Bild~\ref{fig:output3_0} visualisiert. 
 Wenn man versucht, die Grenze zwischen zwei Zonen zu annähern, sieht man, dass dort immer eine dritte Zone vorkommt. 
 Das wiederholt sich rekursiv bei Annäherung.
-In anderen Worten, wenn man einen Punkt $z_0$, der gegen $+1$ konvergiert, und einen Punkt $z_1$, der gegen  $-\sqrt[3]{-1}$ konvergiert, wählt, dann existiert zwischen $z_0$ und $z_1$ immer einer dritter Punkt $z_2$, der noch näher zu $z_0$ als $z_1$ liegt und gegen $(-1)^{2/3}$ konvergiert. \\
+In anderen Worten, wenn man einen Punkt $z_0$, der gegen $+1$ konvergiert, und einen Punkt $z_1$, der gegen  $-\sqrt[3]{-1}$ konvergiert, wählt, dann existiert zwischen $z_0$ und $z_1$ immer ein dritter Punkt $z_2$, der noch näher zu $z_0$ als $z_1$ liegt und gegen $(-1)^{2/3}$ konvergiert. \\
 Wichtigste Frage ist: warum sehen die Zonen nicht wie die einfachen 120-Grad-Sektoren aus?
 Anfang letztes Jahrhunderts gelang es zwei französischen Mathematiker Gaston Julia und Pierre Fatou zu zeigen, dass die Grenzpunkte eines Einzugsgebiets die Grenzpunkte aller Einzugsgebiete sind. 
 Folglich können Iterationen mit mehr als zwei Einzugsgebieten keine einfach zusammenhängenden Liniensegmente als Gebietsgrenzen in 2D haben. 
 Solche Grenzen müssen zwangsläufig fraktaler Natur sein, bestehend aus vollständig separaten Punktmengen - sozusagen eine unendlich feine Staubwolke aus nichtabzählbar vielen Staubpartikelchen.~\cite{frak_cha}\\
-Machen wir uns damit ein bisschen vertraut, indem wir den Ursprung (den Punkt $0, 0$) anschauen.
+Machen wir uns damit ein bisschen vertraut, indem wir den Ursprung (den Punkt ($0, 0$)) anschauen.
 Logischerweise soll der Ursprung zwischen allen Zonen liegen.
 Der Punkt selbst konvergiert überhaupt nicht, da die Einsetzung $z=0$ in die iterative Formel zur Division durch Null folgt. 
 Aber nicht nur der Ursprung besitzt diese Eigenschaften.
@@ -398,16 +398,16 @@ Iterieren wir den Punkt (0.1, 0), der ziemlich nah zum Ursprung liegt.
 Dann ist $z_0=0.1$; $z_1= 1.014213$ und $z_2= 0.079655$.
 Man sieht, dass $z_2$ noch näher zum Ursprung liegt, als $z_0$.
 Je mehr iterative Schritte man ausführt, desto näher es zum Ursprung hintritt.
-Wenn man versucht, andere Punkte aus der Umgebung dem Ursprung zu iterieren, werden die Punkte, die nah genug liegen, gegen den Ursprung konvergieren.
+Wenn man versucht, andere Punkte aus der Umgebung des Ursprungs zu iterieren, werden die Punkte, die nah genug liegen, gegen den Ursprung konvergieren.
 So werden die weißen Fällen gebildet, die diese Funktion auszeichnen.
 
 \section{Zusammenfassung}
 Numerische Lösungen von nichtlinearen Gleichungen durch Approximation sind in der modernen Welt überall gebraucht.
-Man berechnet alles von der Wetterprognose und dem Werkzeugmaschinenverhalten bis die Raketensteuerung und die Planetenbahn.
+Man berechnet alles von der Wetterprognose und dem Werkzeugmaschinenverhalten bis zu der Raketensteuerung und der Planetenbahn.
 Die approximativen Berechnungen bringen viele unerwartete Probleme und interessante Ereignisse.
 Newton-Fraktale sind ein dieser Ereignisse. 
 Die Erforschung des Phänomens ist wichtig für unser Verständnis des Newton-Verfahrens. 
-Je besser man versteht, wie die numerische Methoden sich verhalten, desto effektiver können sie genutzt werden.\\
+Je besser man versteht, wie die numerische Methoden sich verhalten, desto effektiver können sie benutzt werden.\\
 Im Rahmen dieser Arbeit wurden theoretische Grundlagen vorgestellt, wichtigste Begriffe erläutert und erklärt.
 Dann wurde die Software entwickelt, die manche Newton-Fraktale visualisiert.
 Es wurde eine Methode vorgestellt, die beschreibt, wie man Animationen erzeugen kann.
